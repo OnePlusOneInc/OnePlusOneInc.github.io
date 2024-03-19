@@ -1,0 +1,7 @@
+############# English navigation ##############
+
+# footer menu
+[[footer]]
+name = "About"
+url = "about/"
+weight = 1
