@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+  .textStyles {
+    .logo {
+      font-family: theme(fontFamily.logo);
+      font-size: 60px;
+      font-weight: 600;
+      letter-spacing: -3.5px;
+    }
+
+  }
+}
