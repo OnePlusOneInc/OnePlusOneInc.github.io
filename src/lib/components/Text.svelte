@@ -13,7 +13,7 @@
 
 
 {#if type === 'logo'}
-  <h1 class={`font-inter font-semibold text-5xl sm:text-6xl tracking-logo ${colorClasses[color]} ${style}`}>
+  <h1 class={`font-inter font-semibold text-5xl sm:text-6xl tracking-logo ${colorClasses[color]} ${style ? style : ''}`}>
   <slot />
   </h1>
 {:else if type === 'heading'}
@@ -21,7 +21,7 @@
     <slot />
     </h1>
     {:else if type === 'copy'}
-      <h1 class={`font-inter font-normal text-sm sm:text-base ${colorClasses[color]} ${style}`}>
+      <h1 class={`font-inter font-normal text-sm sm:text-base ${colorClasses[color]} ${style ? style : ''}`}>
         <slot />
         </h1>
 {/if}
