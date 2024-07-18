@@ -3,10 +3,11 @@ export default {
   darkMode: 'media',
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
+    fontFamily: {
+      inter: ['Inter', 'sans-serif'],
+      geist: ['Geist', 'sans-serif'], 
+    },
     extend: {
-      fontFamily: {
-        'logo': ['Inter', 'sans-serif']
-      },
       letterSpacing: {
         logo: '-3.5px',
       },
