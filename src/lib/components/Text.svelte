@@ -3,8 +3,8 @@
   type StyleColor = 'primary';
 
   export let type: TextType;
-  export let color: StyleColor = 'primary';
-  export let style: String | undefined = undefined;
+export let color: StyleColor = 'primary';
+  export let style: string | undefined = undefined;
 
   const colorClasses: Record<StyleColor, string> = {
     primary: 'text-primary-light dark:text-primary-dark'
@@ -13,7 +13,7 @@
 
 
 {#if type === 'logo'}
-  <h1 class={`font-inter font-semibold text-5xl sm:text-6xl tracking-logo ${colorClasses[color]} ${style ? style : ''}`}>
+  <h1 class={`font-inter font-semibold text-5xl sm:text-0xl tracking-logo ${colorClasses[color]} ${style ? style : ''}`}>
   <slot />
   </h1>
 {:else if type === 'heading'}
