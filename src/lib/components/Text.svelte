@@ -1,27 +1,33 @@
 <script lang="ts">
-  type TextType = 'logo' | 'heading' | 'copy';
-  type StyleColor = 'primary';
+  import { cva, type VariantProps } from "class-variance-authority"
+  import type { HTMLAttributes } from "svelte/elements"
 
-  export let type: TextType;
-export let color: StyleColor = 'primary';
-  export let style: string | undefined = undefined;
+  const style = cva(undefined, {
+    variants: {
+      type: {
+        logo: [
+          'font-inter', 'font-semibold', 'text-5xl', 'sm:text-6xl', 'tracking-logo',
+        ],
+        heading: [
+          'font-geist', 'font-medium', 'text-4xl', 'sm:text-5xl', 
+        ],
+        copy: [
+          'font-inter', 'font-normal', 'text-sm', 'sm:text-base' 
+        ]
+      },
+      color: {
+        primary: ['text-primary-light', 'dark:text-primary-dark']
+      },
+    },
+  })
+  
+  type StyleProps = VariantProps<typeof style>
+  interface $$props extends Pick<HTMLAttributes<HTMLElement>, 'class'>, StyleProps {}
 
-  const colorClasses: Record<StyleColor, string> = {
-    primary: 'text-primary-light dark:text-primary-dark'
-  }
+  export let type: StyleProps['type']
+  export let color: StyleProps['color'] = 'primary';
 </script>
 
-
-{#if type === 'logo'}
-  <h1 class={`font-inter font-semibold text-5xl sm:text-0xl tracking-logo ${colorClasses[color]} ${style ? style : ''}`}>
+<h1 {...$$props} class={style({type, color, class: $$props.class})}>
   <slot />
-  </h1>
-{:else if type === 'heading'}
-  <h1 class={`font-geist font-medium text-4xl sm:text-5xl ${colorClasses[color]} ${style ? style : ''}`}>
-    <slot />
-    </h1>
-    {:else if type === 'copy'}
-      <h1 class={`font-inter font-normal text-sm sm:text-base ${colorClasses[color]} ${style ? style : ''}`}>
-        <slot />
-        </h1>
-{/if}
+</h1>
