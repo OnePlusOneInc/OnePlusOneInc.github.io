@@ -7,8 +7,6 @@ import prettier from 'eslint-config-prettier';
 import globals from 'globals';
 import tailwind from "eslint-plugin-tailwindcss";
 
-const dirname = import.meta.dirname;
-
 export default ts.config(
 	js.configs.recommended,
 	...ts.configs.strictTypeChecked,
@@ -23,12 +21,9 @@ export default ts.config(
 				...globals.node
 			},
 			parserOptions: {
-				projectService: {
-          allowDefaultProject: [`./*.{ts,js,mjs,cjs}`],
-          defaultProject: './tsconfig.json',
-        },
+				projectService: true,
 				extraFileExtensions: ['.svelte'],
-				tsconfigRootDir: dirname,
+				tsconfigRootDir: import.meta.dirname,
 			},
 		},
 	},
