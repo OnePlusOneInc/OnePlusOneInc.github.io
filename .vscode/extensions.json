@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "vitest.explorer",
     "bradlc.vscode-tailwindcss",
     "ryu1kn.partial-diff",
     "svelte.svelte-vscode",
