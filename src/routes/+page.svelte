@@ -3,6 +3,7 @@
 	import BigNumberCard from './big_number_card.svelte';
 	import ProblemCard from './problem_card.svelte';
 	import Logo from '$lib/components/Logo.svelte';
+	import LinkedinLogo from '$lib/assets/linkedin_logo.svelte';
 
 	const features: string[] = [
 		'Seamless integrate partnerships in sales discussions',
@@ -149,6 +150,6 @@
 	<!-- Footer -->
 	<footer class="flex place-items-center px-4 py-2">
 		<p class="grow">&copy; {currentDate.getFullYear()} OnePlusOne</p>
-		<a class="h-12 w-12 rounded-md bg-[#FF5C00] text-center text-neutral-100" href="/">in</a>
+		<a href="/"><LinkedinLogo /></a>
 	</footer>
 </section>
