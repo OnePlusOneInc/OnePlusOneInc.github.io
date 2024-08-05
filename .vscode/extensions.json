@@ -1,7 +1,12 @@
 {
   "recommendations": [
+    "vitest.explorer",
     "bradlc.vscode-tailwindcss",
-    "budparr.language-hugo-vscode",
-    "tamasfe.even-better-toml"
+    "ryu1kn.partial-diff",
+    "svelte.svelte-vscode",
+    "SimonSiefke.svg-preview",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
   ]
 }

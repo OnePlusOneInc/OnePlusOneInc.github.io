@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`404 > should display a 404 page 1`] = `
+<div>
+  <div
+    class="h-screen p-4 flex flex-col flex-nowrap align-middle justify-center items-center"
+  >
+    <img
+      alt=""
+      class="w-32"
+      src="/src/lib/assets/404.svg"
+    />
+     
+    <h1
+      class="font-geist font-medium text-4xl sm:text-5xl text-primary-light dark:text-primary-dark mt-6 mb-4"
+      type="heading"
+    >
+      Not found
+    </h1>
+     
+    <h1
+      class="font-inter font-normal text-sm sm:text-base text-primary-light dark:text-primary-dark"
+      type="copy"
+    >
+      The page you're looking for doesn't exist
+    </h1>
+  </div>
+</div>
+`;
