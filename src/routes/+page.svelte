@@ -1,9 +1,7 @@
 <script lang="ts">
-	const problems: string[] = [
-		'An average of 306 cold emails sent to generate 1 lead',
-		'MQL to SQL conversion rates have dropped to a mere 13%',
-		'B2B Marketing Customer Acquisition Costs have surged 75% in the past 5 years'
-	];
+	import FeatureCard from './feature_card.svelte';
+	import BigNumberCard from './big_number_card.svelte';
+	import ProblemCard from './problem_card.svelte';
 
 	const features: string[] = [
 		'Seamless integrate partnerships in sales discussions',
@@ -31,11 +29,9 @@
 <!-- Hero -->
 <section class="p-8">
 	<div class="flex flex-col items-center gap-4">
-		<p class="rounded-full bg-neutral-800 px-4 py-1 text-sm text-neutral-100">
-			Backed by top investors
-		</p>
+		<p class="rounded-full bg-neutral-800 px-4 py-1 text-neutral-100">Backed by top investors</p>
 		<h1 class="text-center text-4xl text-neutral-100">Turn all Partnerships into Revenue</h1>
-		<p class="text-center text-neutral-400">
+		<p class="max-w-sm text-center text-neutral-400">
 			Our AI Partnerships Intelligence Platform analyzes sales calls to uncover partner
 			opportunities. Our insights and workflows empower you to boost revenue and close deals faster
 			through partnerships.
@@ -45,49 +41,31 @@
 </section>
 
 <!-- Metric Cards -->
-<section class="flex flex-col gap-4 p-8 text-neutral-100">
+<section class="flex flex-col gap-8 p-8 text-neutral-100">
 	<h2 class="text-center text-2xl">When you tap into your Partner Ecosystem:</h2>
-	<div class="m-auto w-3/4 rounded-md bg-gradient-to-r from-neutral-400 to-neutral-700 p-0.5">
-		<div class="aspect-square content-center rounded-md bg-neutral-800 p-8">
-			<h3 class="mb-2 text-center text-6xl">2X</h3>
-			<p class="text-center text-xl text-neutral-500">Drive 2x more revenue</p>
-		</div>
-	</div>
-	<div class="m-auto w-3/4 rounded-md bg-gradient-to-r from-neutral-400 to-neutral-700 p-0.5">
-		<div class="aspect-square content-center rounded-md bg-neutral-800 p-8">
-			<h3 class="mb-2 text-center text-6xl">41%</h3>
-			<p class="text-center text-xl text-neutral-500">41% Higher Win Rate</p>
-		</div>
-	</div>
-	<div class="m-auto w-3/4 rounded-md bg-gradient-to-r from-neutral-400 to-neutral-700 p-0.5">
-		<div class="aspect-square content-center rounded-md bg-neutral-800 p-8">
-			<h3 class="mb-2 text-center text-6xl">35%</h3>
-			<p class="text-center text-xl text-neutral-500">Close deals 35% faster</p>
-		</div>
+
+	<div class="flex flex-col justify-center gap-4 md:flex-row">
+		<BigNumberCard title="2X" description="Drive 2x more revenue" />
+		<BigNumberCard title="41%" description="41% Higher Win Rate" />
+		<BigNumberCard title="35%" description="Close deals 35% faster" />
 	</div>
 </section>
 
 <!-- GTM Problem -->
-<section class="flex flex-col gap-4 bg-neutral-800 p-8">
+<section class="flex flex-col gap-8 bg-neutral-800 p-8">
 	<h2 class="text-center text-2xl text-neutral-100">The GTM Problem</h2>
-	<p class="text-center text-sm text-neutral-400">
+	<p class="text-center text-neutral-400">
 		B2B companies are struggling to hit revenue targets in this economic downturn. Buyers are
 		overwhelmed by volume-based tactics, generic outreach, and AI-generated content.
 	</p>
 
-	{#each problems as problem}
-		<div class="rounded-md bg-neutral-700 p-2">
-			<div class="aspect-square content-center">
-				<h3 class="text-center text-neutral-600">Illustration here</h3>
-			</div>
-			<div
-				class="h-0.5 bg-gradient-to-r from-neutral-700 from-10% via-neutral-300 to-neutral-700 to-90%"
-			/>
-			<p class="p-4 text-center text-sm text-neutral-500">
-				{problem}
-			</p>
-		</div>
-	{/each}
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+		<ProblemCard problem="An average of 306 cold emails sent to generate 1 lead" />
+		<ProblemCard problem="MQL to SQL conversion rates have dropped to a mere 13%" />
+		<ProblemCard
+			problem="B2B Marketing Customer Acquisition Costs have surged 75% in the past 5 years"
+		/>
+	</div>
 
 	<p class="text-center text-neutral-100">This is why 84% of B2B purchases start with a referral</p>
 </section>
@@ -98,12 +76,12 @@
 	<section class="flex flex-col gap-4 p-8">
 		<h2 class="text-center text-2xl">But Partnerships are still stuck in the old day</h2>
 
-		<p class="text-center text-sm text-neutral-500">
+		<p class="text-center text-neutral-500">
 			Partnerships often lose momentum, miss timelines, fail to launch, or bring consistent results
 			because Partner Managers are stuck using tools and processes built for other GTM departments.
 		</p>
 
-		<ul class="list-inside list-disc gap-4 text-sm">
+		<ul class="list-inside list-disc gap-4">
 			<li class="mb-2 text-[#FF5C00]">
 				<span class="text-neutral-900">Missing referrals and losing deals?</span>
 			</li>
@@ -154,21 +132,13 @@
 	<section class="flex flex-col gap-4 p-8">
 		<h2 class="text-center text-2xl">A New Era for Partnerships</h2>
 
-		<p class="text-center text-sm text-neutral-500">
+		<p class="text-center text-neutral-500">
 			We empower B2B partnership teams with AI-powered insights, workflows, and automation to
 			activate new partnerships, uncover referrals, and boost revenue.
 		</p>
 
 		{#each features as feature}
-			<div class="rounded-md border-2 border-[#FF5C00] p-2">
-				<div class="content-center p-16">
-					<h3 class="text-center text-xl text-neutral-600">Illustration here</h3>
-				</div>
-
-				<p class="p-4 text-center text-sm text-neutral-600">
-					{feature}
-				</p>
-			</div>
+			<FeatureCard {feature} />
 		{/each}
 	</section>
 
