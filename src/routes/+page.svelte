@@ -2,14 +2,14 @@
 	import FeatureCard from './feature_card.svelte';
 	import BigNumberCard from './big_number_card.svelte';
 	import ProblemCard from './problem_card.svelte';
+	import Logo from '$lib/components/Logo.svelte';
 
 	const features: string[] = [
 		'Seamless integrate partnerships in sales discussions',
 		'Maximize partnerships as a resource',
 		'Tell your AEs when partners can help source and close deals',
 		'Leverage power workflows to enhance efficiency',
-		'Keep partners informed',
-		'Convert more pipeline with partner intent signals',
+		'Keep partners informed', 'Convert more pipeline with partner intent signals',
 		'Never miss a referral again'
 	];
 
@@ -21,8 +21,8 @@
 	class="bg-gradient-to-r from-neutral-800 from-25% via-neutral-400 to-neutral-800 to-75% pb-0.5 text-neutral-100"
 >
 	<div class="flex items-center bg-neutral-900 p-4">
-		<p class="flex-grow">Logo</p>
-		<button class="rounded-full border-2 border-neutral-700 px-4 py-1">Get Early Access</button>
+    	<div class="h-4 md:h-6 grow"><Logo text={true} /></div>
+    	<button class="rounded-full border-2 border-neutral-700 px-4 py-1">Get Early Access</button>
 	</div>
 </section>
 
@@ -148,7 +148,7 @@
 
 	<!-- Footer -->
 	<footer class="flex place-items-center px-4 py-2">
-		<p class="flex-grow">&copy; {currentDate.getFullYear()} OnePlusOne</p>
+		<p class="grow">&copy; {currentDate.getFullYear()} OnePlusOne</p>
 		<a class="h-12 w-12 rounded-md bg-[#FF5C00] text-center text-neutral-100" href="/">in</a>
 	</footer>
 </section>
