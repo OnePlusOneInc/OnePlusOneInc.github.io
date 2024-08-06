@@ -1,9 +1,11 @@
 <script lang="ts">
-	import FeatureCard from './feature_card.svelte';
-	import BigNumberCard from './big_number_card.svelte';
-	import ProblemCard from './problem_card.svelte';
-	import Logo from '$lib/components/Logo.svelte';
-	import LinkedinLogo from '$lib/assets/linkedin_logo.svelte';
+	import FeatureCard from './feature_card.svelte'
+	import BigNumberCard from './big_number_card.svelte'
+	import ProblemCard from './problem_card.svelte'
+	import Logo from '$lib/components/Logo.svelte'
+	import LinkedinLogo from '$lib/assets/linkedin_logo.svelte'
+	import Pill from '$lib/components/Pill/Pill.svelte'
+	import AnimatedCarousel from '$lib/components/AnimatedCarousel/AnimatedCarousel.svelte'
 
 	const features: string[] = [
 		'Seamless integrate partnerships in sales discussions',
@@ -13,6 +15,12 @@
 		'Keep partners informed', 'Convert more pipeline with partner intent signals',
 		'Never miss a referral again'
 	];
+
+	const bulletPoints: Record<'one' | 'two' | 'three', string[]> = {
+		one: ["Missing referrals and losing deals?", "Constantly reminding your sales team to refer partners?", "Organizing partner enablement sessions and documents that no one reads?"],
+		two: ["Struggling to track which partners are actually referring business?", "Tired of sending endless \"just checking in\" messages?", "Unsure how to build on initial partnership momentum?"],
+		three: ["Wishing you could be on every sales call to highlight partner value?", "Spending hours in Salesforce trying to support your sales team?", "Losing credit for partner-driven deals due to poor record-keeping?"]
+	}
 
 	const currentDate = new Date();
 </script>
@@ -74,59 +82,27 @@
 <!-- Light Background -->
 <section class="rounded-t-xl bg-[#FFF1E0] text-neutral-900">
 	<!-- Bullet Points -->
-	<section class="flex flex-col gap-4 p-8">
-		<h2 class="text-center text-2xl">But Partnerships are still stuck in the old day</h2>
+	<section class="flex flex-col gap-4 py-8">
+		<h2 class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</h2>
 
-		<p class="text-center text-neutral-500">
-			Partnerships often lose momentum, miss timelines, fail to launch, or bring consistent results
-			because Partner Managers are stuck using tools and processes built for other GTM departments.
+		<p class="text-center text-neutral-500 px-8">
+			Partnerships often lose momentum, miss timelines, fail to launch, or fail to bring consistent results because Partner Managers are stuck using tools and processes built for other GTM departments.
 		</p>
-
-		<ul class="list-inside list-disc gap-4">
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900">Missing referrals and losing deals?</span>
-			</li>
-
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900">Tired of sending endless "just checking in" messages?</span>
-			</li>
-
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900">Unsure how to build on initial partnership momentum?</span>
-			</li>
-
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900">
-					Struggling to track which partners are actually referring business?
-				</span>
-			</li>
-
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900"
-					>Spending hours in Salesforce trying to support your sales team?</span
-				>
-			</li>
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900">
-					Constantly reminding your sales team to refer partners?
-				</span>
-			</li>
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900">
-					Organizing partner education sessions and documents that no one cares about?
-				</span>
-			</li>
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900">
-					Wishing you could be on every sales call to highlight partner value?
-				</span>
-			</li>
-			<li class="mb-2 text-[#FF5C00]">
-				<span class="text-neutral-900">
-					Losing credit for partner-driven deals due to poor record-keeping?
-				</span>
-			</li>
-		</ul>
+		<AnimatedCarousel direction="leftToRight">
+			{#each bulletPoints['one'] as bulletPoint}
+				<Pill>{bulletPoint}</Pill>
+			{/each}
+		</AnimatedCarousel>
+		<AnimatedCarousel direction="rightToLeft">
+			{#each bulletPoints['two'] as bulletPoint}
+				<Pill>{bulletPoint}</Pill>
+			{/each}
+		</AnimatedCarousel>
+		<AnimatedCarousel direction="leftToRight">
+			{#each bulletPoints['three'] as bulletPoint}
+				<Pill>{bulletPoint}</Pill>
+			{/each}
+		</AnimatedCarousel>
 	</section>
 
 	<!-- Illustrations -->
