@@ -23,7 +23,7 @@
 >
 	<div class="flex items-center bg-neutral-900 p-4">
     	<div class="h-4 md:h-6 grow"><Logo text={true} /></div>
-    	<button class="rounded-full border-2 border-neutral-700 px-4 py-1">Get Early Access</button>
+    	<a href="https://tally.so/r/nrVBgN"><button class="rounded-full border-2 border-neutral-700 px-4 py-1">Get Early Access</button></a>
 	</div>
 </section>
 
@@ -37,7 +37,7 @@
 			opportunities. Our insights and workflows empower you to boost revenue and close deals faster
 			through partnerships.
 		</p>
-		<button class="rounded-full bg-orange-500 px-4 py-1 text-neutral-100">Get Early Access</button>
+		<a href="https://tally.so/r/nrVBgN"><button class="rounded-full bg-orange-500 px-4 py-1 text-neutral-100">Get Early Access</button></a>
 	</div>
 </section>
 
