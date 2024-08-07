@@ -20,6 +20,6 @@
 	});
 </script>
 
-<div bind:this={card}>
+<div bind:this={card} class={$$props.class}>
 	<slot />
 </div>

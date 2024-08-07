@@ -4,7 +4,7 @@
 	export let feature: string;
 </script>
 
-<FadeInCard>
+<FadeInCard class={$$props.class}>
 	<div class="rounded-md border-2 border-[#FF5C00] p-2">
 		<div class="content-center p-16">
 			<h3 class="text-center text-xl text-neutral-600">Illustration here</h3>
