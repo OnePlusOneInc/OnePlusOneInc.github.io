@@ -28,6 +28,12 @@
   export let color: StyleProps['color'] = 'primary';
 </script>
 
-<h1 {...$$props} class={style({type, color, class: $$props.class})}>
-  <slot />
-</h1>
+{#if  type === 'copy'}
+  <p {...$$props} class={style({type, color, class: $$props.class})}>
+    <slot />
+  </p>  
+{:else}
+  <h1 {...$$props} class={style({type, color, class: $$props.class})}>
+    <slot />
+  </h1>
+{/if}
