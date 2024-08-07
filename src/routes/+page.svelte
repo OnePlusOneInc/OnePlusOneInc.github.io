@@ -30,14 +30,14 @@
 <section
 	class="bg-gradient-to-r from-neutral-800 from-25% via-neutral-400 to-neutral-800 to-75% pb-0.5 text-neutral-100"
 >
-	<div class="flex items-center bg-neutral-900 p-4">
+	<div class="flex items-center bg-hero p-4">
     	<div class="h-4 md:h-6 grow"><Logo text={true} /></div>
     	<a href="https://tally.so/r/nrVBgN"><button class="rounded-full border-2 border-neutral-700 px-4 py-1">Get Early Access</button></a>
 	</div>
 </section>
 
 <!-- Hero -->
-<section class="py-8">
+<section class="px-8 py-16 bg-hero bg-[size:200%] md:bg-cover" id="hero">
 	<div class="flex flex-col items-center gap-4 px-[10%]">
 		<Text type="callout" color="darkPrimary" class="rounded-full px-4 sm:px-5 py-2 bg-primary-dark">Backed by top investors</Text>
 		<Text type="hero" color="darkPrimary" class="sm:max-w-[60%] text-center">Turn all Partnerships into Revenue</Text>
@@ -130,3 +130,11 @@
 		<a href="/"><LinkedinLogo /></a>
 	</footer>
 </section>
+
+<style>
+    section#hero {
+        background-image: url('$lib/assets/hero_background.svg');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+</style>
