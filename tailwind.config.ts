@@ -34,7 +34,9 @@ export default {
 			},
 			colors: {
 				'opo-orange': '#FF5C00',
-				'opo-red': '#DE1E45'
+				'opo-red': '#DE1E45',
+				'primary-light': '#FFFAF4',
+				'primary-dark': '#1D1D20'
 			},
 			animation: {
 				fadeIn: 'fadeIn 1s ease-in forwards'
