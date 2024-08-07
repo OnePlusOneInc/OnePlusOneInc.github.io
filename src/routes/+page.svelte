@@ -6,6 +6,7 @@
 	import LinkedinLogo from '$lib/assets/linkedin_logo.svelte'
 	import Pill from '$lib/components/Pill/Pill.svelte'
 	import AnimatedCarousel from '$lib/components/AnimatedCarousel/AnimatedCarousel.svelte'
+	import Text from '$lib/components/Text.svelte'
 
 	const features: string[] = [
 		'Seamless integrate partnerships in sales discussions',
@@ -36,22 +37,22 @@
 </section>
 
 <!-- Hero -->
-<section class="p-8">
-	<div class="flex flex-col items-center gap-4">
-		<p class="rounded-full bg-neutral-800 px-4 py-1 text-neutral-100">Backed by top investors</p>
-		<h1 class="text-center text-4xl text-neutral-100">Turn all Partnerships into Revenue</h1>
-		<p class="max-w-sm text-center text-neutral-400">
+<section class="py-8">
+	<div class="flex flex-col items-center gap-4 px-[10%]">
+		<Text type="callout" color="darkPrimary" class="rounded-full px-4 sm:px-5 py-2 bg-primary-dark">Backed by top investors</Text>
+		<Text type="hero" color="darkPrimary" class="sm:max-w-[60%] text-center">Turn all Partnerships into Revenue</Text>
+		<Text type="subhead" color="darkSecondary" class="sm:max-w-[55%] text-center">
 			Our AI Partnerships Intelligence Platform analyzes sales calls to uncover partner
 			opportunities. Our insights and workflows empower you to boost revenue and close deals faster
 			through partnerships.
-		</p>
+		</Text>
 		<a href="https://tally.so/r/nrVBgN"><button class="rounded-full bg-orange-500 px-4 py-1 text-neutral-100">Get Early Access</button></a>
 	</div>
 </section>
 
 <!-- Metric Cards -->
 <section class="flex flex-col gap-8 p-8 text-neutral-100">
-	<h2 class="text-center text-2xl">When you tap into your Partner Ecosystem:</h2>
+	<Text type="title1" color="darkPrimary" class="text-center">When you tap into your Partner Ecosystem:</Text>
 
 	<div class="flex flex-col justify-center gap-4 md:flex-row">
 		<BigNumberCard title="2X" description="Drive 2x more revenue" />
@@ -62,11 +63,11 @@
 
 <!-- GTM Problem -->
 <section class="flex flex-col gap-8 bg-neutral-800 p-8">
-	<h2 class="text-center text-2xl text-neutral-100">The GTM Problem</h2>
-	<p class="text-center text-neutral-400">
+	<Text type="title1" color="darkPrimary" class="text-center">The GTM Problem</Text>
+	<Text type="subhead" color="darkSecondary" class="text-center">
 		B2B companies are struggling to hit revenue targets in this economic downturn. Buyers are
 		overwhelmed by volume-based tactics, generic outreach, and AI-generated content.
-	</p>
+	</Text>
 
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 		<ProblemCard problem="An average of 306 cold emails sent to generate 1 lead" />
@@ -83,11 +84,11 @@
 <section class="rounded-t-xl bg-[#FFF1E0] text-neutral-900">
 	<!-- Bullet Points -->
 	<section class="flex flex-col gap-4 py-8">
-		<h2 class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</h2>
+		<Text type="title1" color="lightPrimary" class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</Text>
 
-		<p class="text-center text-neutral-500 px-8">
+		<Text type="subhead" color="lightSecondary" class="text-center px-8">
 			Partnerships often lose momentum, miss timelines, fail to launch, or fail to bring consistent results because Partner Managers are stuck using tools and processes built for other GTM departments.
-		</p>
+		</Text>
 		<AnimatedCarousel direction="leftToRight">
 			{#each bulletPoints['one'] as bulletPoint}
 				<Pill>{bulletPoint}</Pill>
@@ -107,12 +108,12 @@
 
 	<!-- Illustrations -->
 	<section class="flex flex-col gap-4 p-8">
-		<h2 class="text-center text-2xl">A New Era for Partnerships</h2>
+		<Text type="title1" color="lightPrimary" class="text-center">A New Era for Partnerships</Text>
 
-		<p class="text-center text-neutral-500">
+		<Text type="subhead" color="lightSecondary" class="text-center">
 			We empower B2B partnership teams with AI-powered insights, workflows, and automation to
 			activate new partnerships, uncover referrals, and boost revenue.
-		</p>
+		</Text>
 
 		{#each features as feature}
 			<FeatureCard {feature} />
@@ -120,7 +121,7 @@
 	</section>
 
 	<section class="p-8">
-		<h2 class="text-center text-2xl">Never let a referral escape</h2>
+		<Text type="title1" color="lightPrimary" class="text-center">Never let a referral escape</Text>
 	</section>
 
 	<!-- Footer -->

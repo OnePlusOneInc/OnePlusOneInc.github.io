@@ -5,6 +5,6 @@
 
 <div class="h-screen p-4 flex flex-col flex-nowrap align-middle justify-center items-center">
   <img class="w-32" src={hero} alt="">
-  <Text type="heading" class="mt-6 mb-4">Not found</Text>
+  <Text type="title1" class="mt-6 mb-4">Not found</Text>
   <Text type="copy">The page you're looking for doesn't exist</Text>
 </div>

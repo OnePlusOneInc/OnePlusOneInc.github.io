@@ -12,12 +12,23 @@ export default {
 				logo: '-3.5px'
 			},
 			backgroundColor: {
-				light: '#FFF1E0',
-				dark: '#1D1D20'
+				hero: '#111113',
+				primary: {
+					light: '#FFFAF4',
+					dark: '#1D1D20'
+				},
+				secondary: {
+					light: '#FFF6EB',
+					dark: '#242428'
+				}
 			},
 			textColor: {
 				primary: {
-					dark: '#FFF1E0',
+					dark: '#FFFAF4',
+					light: '#1D1D20'
+				},
+				secondary: {
+					dark: '#94928F',
 					light: '#1D1D20'
 				}
 			},
