@@ -1,12 +1,17 @@
 <script lang="ts">
-	import FeatureCard from './feature_card.svelte'
-	import BigNumberCard from './big_number_card.svelte'
-	import ProblemCard from './problem_card.svelte'
+	import FeatureCard from './FeatureCard.svelte'
+	import BigNumberCard from './BigNumberCard.svelte'
+	import ProblemCard from './ProblemCard.svelte'
+	import Icon from './Icon.svelte';
 	import Logo from '$lib/components/Logo.svelte'
 	import LinkedinLogo from '$lib/assets/linkedin_logo.svelte'
 	import Pill from '$lib/components/Pill/Pill.svelte'
 	import AnimatedCarousel from '$lib/components/AnimatedCarousel/AnimatedCarousel.svelte'
 	import Text from '$lib/components/Text.svelte'
+	import Handshake from '$lib/assets/icons/Handshake.svelte';
+	import Writing from '$lib/assets/icons/Writing.svelte';
+	import Arrows from '$lib/assets/icons/Arrows.svelte';
+	import Users from '$lib/assets/icons/Users.svelte';
 
 	/* Size in pixels for the nav bar, defining it as a constant means we can use it to calculate how
 	tall the hero section should be in order to fill the screen taking into account the navbar size */
@@ -66,6 +71,7 @@
 
 <!-- GTM Problem -->
 <section class="flex flex-col gap-8 bg-neutral-800 p-8 md:p-32 min-h-screen items-center">
+    <Icon><Users class="fill-primary-dark" /></Icon>
 	<Text type="title1" color="darkPrimary" class="text-center">The GTM Problem</Text>
 	<Text type="subhead" color="darkSecondary" class="text-center max-w-4xl">
 		B2B companies are struggling to hit revenue targets in this economic downturn. Buyers are
@@ -87,6 +93,7 @@
 <section class="rounded-t-xl bg-[#FFF1E0] text-neutral-900 pt-8 md:pt-32 pb-4">
 	<!-- Bullet Points -->
 	<section class="flex flex-col gap-4 py-8 items-center">
+    	<Icon><Writing class="fill-white" /></Icon>
 		<Text type="title1" color="lightPrimary" class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</Text>
 
 		<Text type="subhead" color="lightSecondary" class="text-center px-8 mb-8 max-w-4xl">
@@ -110,8 +117,9 @@
 	</section>
 
 	<!-- Illustrations -->
-	<section class="flex flex-col gap-4 p-8 items-center">
-		<Text type="title1" color="lightPrimary" class="text-center">A New Era for Partnerships</Text>
+	<section class="flex flex-col items-center gap-4 p-8">
+        <Icon><Handshake class="fill-primary-light" /></Icon>
+       	<Text type="title1" color="lightPrimary" class="text-center">A New Era for Partnerships</Text>
 
 		<Text type="subhead" color="lightSecondary" class="text-center max-w-4xl mb-8">
 			We empower B2B partnership teams with AI-powered insights, workflows, and automation to
@@ -123,7 +131,8 @@
 		{/each}
 	</section>
 
-	<section class="p-8">
+	<section class="p-8 flex flex-col items-center">
+    	<Icon><Arrows class="stroke-neutral-100" /></Icon>
 		<Text type="title1" color="lightPrimary" class="text-center">Never let a referral escape</Text>
 	</section>
 

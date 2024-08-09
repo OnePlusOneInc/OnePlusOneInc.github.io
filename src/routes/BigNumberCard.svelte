@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FadeInCard from './fade_in_card.svelte';
+    import FadeInCard from './FadeInCard.svelte';
 
 	export let title: string;
 	export let description: string;
