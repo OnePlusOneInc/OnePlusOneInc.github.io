@@ -6,12 +6,12 @@
   const justifyContent = direction === 'rightToLeft' ? 'justify-end' : 'justify-start'
 </script>
 
-<div class="[--duration:{duration}s] carousel relative flex flex-row flex-nowrap {justifyContent}
+<div class="carousel relative flex flex-row flex-nowrap {justifyContent} overflow-hidden
   before:left-0 before:bg-gradient-to-r before:from-[#FFF1E0]
   after:right-0 after:bg-gradient-to-l after:from-[#FFF1E0]
   before:absolute before:top-0 before:w-1/12 before:h-full before:content-[''] before:z-10
   after:absolute after:top-0 after:w-1/12 after:h-full after:content-[''] after:z-10
-  ">
+  " style="--duration:{duration}s">
   {#each {length: 2} as _}
     <div class="slide flex flex-row flex-nowrap gap-4 {direction} {justifyContent} pl-2 pr-2">
       <slot></slot>
