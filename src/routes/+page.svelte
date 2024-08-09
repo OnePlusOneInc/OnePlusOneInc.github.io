@@ -8,6 +8,10 @@
 	import AnimatedCarousel from '$lib/components/AnimatedCarousel/AnimatedCarousel.svelte'
 	import Text from '$lib/components/Text.svelte'
 
+	/* Size in pixels for the nav bar, defining it as a constant means we can use it to calculate how
+	tall the hero section should be in order to fill the screen taking into account the navbar size */
+	const navSize: number = 80;
+
 	const features: string[] = [
 		'Seamless integrate partnerships in sales discussions',
 		'Maximize partnerships as a resource',
@@ -28,16 +32,15 @@
 
 <!-- Top bar with logo and "Get early access" button  -->
 <section
-	class="bg-gradient-to-r from-neutral-800 from-25% via-neutral-400 to-neutral-800 to-75% pb-0.5 text-neutral-100"
->
-	<div class="flex items-center bg-hero p-4">
+	class={`bg-gradient-to-r from-neutral-800 from-25% via-neutral-400 to-neutral-800 to-75% pb-0.5 text-neutral-100 h-[${navSize}px]`}>
+	<div class="flex items-center bg-hero p-4 h-full">
     	<div class="h-4 md:h-6 grow"><Logo text={true} /></div>
     	<a href="https://tally.so/r/nrVBgN"><button class="rounded-full border-2 border-neutral-700 px-4 py-1">Get Early Access</button></a>
 	</div>
 </section>
 
 <!-- Hero -->
-<section class="px-8 py-16 bg-hero bg-[size:200%] md:bg-cover" id="hero">
+<section id="hero" class={`py-8 bg-hero bg-[size:200%] md:bg-cover min-h-[calc(100vh-${navSize}px)]`}>
 	<div class="flex flex-col items-center gap-4 px-[10%]">
 		<Text type="callout" color="darkPrimary" class="rounded-full px-4 sm:px-5 py-2 bg-primary-dark">Backed by top investors</Text>
 		<Text type="hero" color="darkPrimary" class="sm:max-w-[60%] text-center">Turn all Partnerships into Revenue</Text>
@@ -51,7 +54,7 @@
 </section>
 
 <!-- Metric Cards -->
-<section class="flex flex-col gap-8 p-8 text-neutral-100">
+<section class="flex flex-col gap-8 p-8 md:p-32 text-neutral-100">
 	<Text type="title1" color="darkPrimary" class="text-center">When you tap into your Partner Ecosystem:</Text>
 
 	<div class="flex flex-col justify-center gap-4 md:flex-row">
@@ -62,9 +65,9 @@
 </section>
 
 <!-- GTM Problem -->
-<section class="flex flex-col gap-8 bg-neutral-800 p-8">
+<section class="flex flex-col gap-8 bg-neutral-800 p-8 md:p-32 min-h-screen items-center">
 	<Text type="title1" color="darkPrimary" class="text-center">The GTM Problem</Text>
-	<Text type="subhead" color="darkSecondary" class="text-center">
+	<Text type="subhead" color="darkSecondary" class="text-center max-w-4xl">
 		B2B companies are struggling to hit revenue targets in this economic downturn. Buyers are
 		overwhelmed by volume-based tactics, generic outreach, and AI-generated content.
 	</Text>
@@ -81,12 +84,12 @@
 </section>
 
 <!-- Light Background -->
-<section class="rounded-t-xl bg-[#FFF1E0] text-neutral-900">
+<section class="rounded-t-xl bg-[#FFF1E0] text-neutral-900 pt-8 md:pt-32 pb-4">
 	<!-- Bullet Points -->
-	<section class="flex flex-col gap-4 py-8">
+	<section class="flex flex-col gap-4 py-8 items-center">
 		<Text type="title1" color="lightPrimary" class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</Text>
 
-		<Text type="subhead" color="lightSecondary" class="text-center px-8">
+		<Text type="subhead" color="lightSecondary" class="text-center px-8 mb-8 max-w-4xl">
 			Partnerships often lose momentum, miss timelines, fail to launch, or fail to bring consistent results because Partner Managers are stuck using tools and processes built for other GTM departments.
 		</Text>
 		<AnimatedCarousel direction="leftToRight">
@@ -107,16 +110,16 @@
 	</section>
 
 	<!-- Illustrations -->
-	<section class="flex flex-col gap-4 p-8">
+	<section class="flex flex-col gap-4 p-8 items-center">
 		<Text type="title1" color="lightPrimary" class="text-center">A New Era for Partnerships</Text>
 
-		<Text type="subhead" color="lightSecondary" class="text-center">
+		<Text type="subhead" color="lightSecondary" class="text-center max-w-4xl mb-8">
 			We empower B2B partnership teams with AI-powered insights, workflows, and automation to
 			activate new partnerships, uncover referrals, and boost revenue.
 		</Text>
 
 		{#each features as feature}
-			<FeatureCard {feature} />
+			<FeatureCard {feature} class="w-full md:w-1/2 m-auto"/>
 		{/each}
 	</section>
 
@@ -125,7 +128,7 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="flex place-items-center px-4 py-2">
+	<footer class="flex place-items-center px-4 pb-2 pt-4 max-w-4xl m-auto">
 		<p class="grow">&copy; {currentDate.getFullYear()} OnePlusOne</p>
 		<a href="/"><LinkedinLogo /></a>
 	</footer>
