@@ -4,7 +4,6 @@
 	import ProblemCard from './ProblemCard.svelte'
 	import Icon from './Icon.svelte';
 	import Logo from '$lib/components/Logo.svelte'
-	import LinkedinLogo from '$lib/assets/linkedin_logo.svelte'
 	import Pill from '$lib/components/Pill/Pill.svelte'
 	import AnimatedCarousel from '$lib/components/AnimatedCarousel/AnimatedCarousel.svelte'
 	import Text from '$lib/components/Text.svelte'
@@ -137,9 +136,10 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="flex place-items-center px-4 pb-2 pt-4 max-w-4xl m-auto">
-		<p class="grow">&copy; {currentDate.getFullYear()} OnePlusOne</p>
-		<a href="/"><LinkedinLogo /></a>
+	<footer class="flex justify-center content-center mx-4 sm:mx-28 py-4 sm:py-10 border-t border-[#EBEBEB]">
+		<Text type="footnote" color="lightPrimary">
+			&copy; {currentDate.getFullYear()} OnePlusOne
+		</Text>
 	</footer>
 </section>
 
