@@ -8,6 +8,8 @@
 	import AnimatedCarousel from '$lib/components/AnimatedCarousel/AnimatedCarousel.svelte'
 	import Text from '$lib/components/Text.svelte'
   import Button from '$lib/components/Button/Button.svelte'
+  import Toast from '$lib/components/Toast/Toast.svelte'
+	import HeroBackground from '$lib/assets/hero_background.svg'
 
 	/* Size in pixels for the nav bar, defining it as a constant means we can use it to calculate how
 	tall the hero section should be in order to fill the screen taking into account the navbar size */
@@ -31,12 +33,13 @@
 	const getEarlyAccessHref = "https://tally.so/r/nrVBgN";
 	const getEarlyAccessText = "Get early access ›";
 	const currentDate = new Date();
+	const pageMargin = "mx-4 sm:mx-12 md:mx-28";
 </script>
 
 <!-- Above the fold section -->
-<section class="bg-hero flex flex-col min-h-screen">
+<section class="bg-hero flex flex-col lg:min-h-screen">
 	<!-- Top bar with logo and "Get early access" button  -->
-	<section id="nav" class="mx-4 sm:mx-12 md:mx-28 flex flex-col flex-nowrap justify-between items-stretch">
+	<section class="{pageMargin} flex flex-col flex-nowrap justify-between items-stretch">
 		<div class="flex flex-row flex-nowrap justify-between items-center py-4 md:py-6 xl:py-8">
 			<Logo text={true} />
 			<Button type="secondary" href={getEarlyAccessHref}>{getEarlyAccessText}</Button>
@@ -45,16 +48,19 @@
 	</section>
 
 	<!-- Hero -->
-	<section id="hero" class={`py-8  bg-[size:200%] md:bg-cover content-center flex-grow`}>
-		<div class="flex flex-col items-center gap-4 px-[10%]">
-			<Text type="callout" color="darkPrimary" class="rounded-full px-4 sm:px-5 py-2 bg-primary-dark">Backed by top investors</Text>
-			<Text type="hero" color="darkPrimary" class="lg:max-w-[60%] text-center">Turn all Partnerships into Revenue</Text>
+	<section class="flex flex-col flex-grow gap-6 sm:gap-8 pt-8 pb-32 sm:pb-24">
+		<div class="{pageMargin} flex flex-col items-center">
+			<Toast type="hero" textColor="hero">Backed by top investors</Toast>
+			<Text type="hero" color="darkPrimary" class="pt-5 pb-4 lg:max-w-[60%] text-center">Turn all Partnerships into Revenue</Text>
 			<Text type="subhead" color="darkSecondary" class="sm:max-w-[55%] text-center">
 				Our AI Partnerships Intelligence Platform analyzes sales calls to uncover partner
 				opportunities. Our insights and workflows empower you to boost revenue and close deals faster
 				through partnerships.
 			</Text>
-			<Button type="primary" href={getEarlyAccessHref}>{getEarlyAccessText}</Button>
+		</div>
+		<div class="flex flex-col relative">
+			<img class="hidden sm:block sm:-mt-6" src={HeroBackground} alt="Background logo" />
+			<Button class="place-self-center sm:z-10 sm:absolute" type="primary" href={getEarlyAccessHref}>{getEarlyAccessText}</Button>
 		</div>
 	</section>
 </section>
@@ -133,24 +139,16 @@
 	</section>
 
 	<!-- Call to Action -->
-	<section class="flex flex-col justify-center items-center gap-3 sm:gap-6 mx-4 sm:mx-28 pb-9 sm:pb-24">
+	<section class="{pageMargin} flex flex-col justify-center items-center gap-3 sm:gap-6 pb-9 sm:pb-24">
     <Icon name="arrows" />
 		<Text type="title1" color="lightPrimary" class="text-center">Never let a referral escape</Text>
 		<Button type="primary" href={getEarlyAccessHref}>{getEarlyAccessText}</Button>
 	</section>
 
 	<!-- Footer -->
-	<footer class="flex justify-center items-center mx-4 sm:mx-28 py-4 sm:py-10 border-t border-[#EBEBEB]">
+	<footer class="{pageMargin} flex justify-center items-center py-4 sm:py-10 border-t border-[#EBEBEB]">
 		<Text type="footnote" color="lightPrimary">
 			&copy; {currentDate.getFullYear()} OnePlusOne
 		</Text>
 	</footer>
 </section>
-
-<style>
-    section#hero {
-        background-image: url('$lib/assets/hero_background.svg');
-        background-repeat: no-repeat;
-        background-position: bottom center;
-    }
-</style>
