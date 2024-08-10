@@ -20,6 +20,7 @@
     "test:unit:watch": "vitest"
   },
   "dependencies": {
+    "@sanity/client": "^6.21.2",
     "class-variance-authority": "^0.7.0"
   },
   "devDependencies": {
