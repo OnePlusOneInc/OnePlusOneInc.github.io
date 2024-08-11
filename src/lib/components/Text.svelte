@@ -25,6 +25,9 @@
         ],
         callout: [
           'font-inter', 'font-medium', 'text-sm', 'sm:text-base', 
+        ], 
+        button: [
+          'font-inter', 'font-medium', 'text-sm', 'sm:text-base',
         ]
       },
       color: {
@@ -34,6 +37,7 @@
         secondary: ['text-secondary-light', 'dark:text-secondary-dark'],
         lightSecondary: ['text-secondary-light'],
         darkSecondary: ['text-secondary-dark'],
+        unstyled: [],
       },
     },
   })
@@ -45,7 +49,7 @@
   export let color: StyleProps['color'] = 'primary';
 </script>
 
-{#if  type === 'copy' || type === 'callout'}
+{#if  type === 'copy' || type === 'callout' || type === 'button'}
   <p {...$$props} class={style({type, color, class: $$props.class})}>
     <slot />
   </p>

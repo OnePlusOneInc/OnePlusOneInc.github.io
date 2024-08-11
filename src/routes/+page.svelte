@@ -7,10 +7,7 @@
 	import Pill from '$lib/components/Pill/Pill.svelte'
 	import AnimatedCarousel from '$lib/components/AnimatedCarousel/AnimatedCarousel.svelte'
 	import Text from '$lib/components/Text.svelte'
-	import Handshake from '$lib/assets/icons/Handshake.svelte';
-	import Writing from '$lib/assets/icons/Writing.svelte';
-	import Arrows from '$lib/assets/icons/Arrows.svelte';
-	import Users from '$lib/assets/icons/Users.svelte';
+  import Button from '$lib/components/Button/Button.svelte'
 
 	/* Size in pixels for the nav bar, defining it as a constant means we can use it to calculate how
 	tall the hero section should be in order to fill the screen taking into account the navbar size */
@@ -31,6 +28,8 @@
 		three: ["Wishing you could be on every sales call to highlight partner value?", "Spending hours in Salesforce trying to support your sales team?", "Losing credit for partner-driven deals due to poor record-keeping?"]
 	}
 
+	const getEarlyAccessHref = "https://tally.so/r/nrVBgN";
+	const getEarlyAccessText = "Get early access ›";
 	const currentDate = new Date();
 </script>
 
@@ -70,7 +69,7 @@
 
 <!-- GTM Problem -->
 <section class="flex flex-col gap-8 bg-neutral-800 p-8 md:p-32 min-h-screen items-center">
-    <Icon><Users class="fill-primary-dark" /></Icon>
+    <Icon name="users" />
 	<Text type="title1" color="darkPrimary" class="text-center">The GTM Problem</Text>
 	<Text type="subhead" color="darkSecondary" class="text-center max-w-4xl">
 		B2B companies are struggling to hit revenue targets in this economic downturn. Buyers are
@@ -89,10 +88,10 @@
 </section>
 
 <!-- Light Background -->
-<section class="rounded-t-xl bg-[#FFF1E0] text-neutral-900 pt-8 md:pt-32 pb-4">
+<section class="rounded-t-xl bg-primary-light text-neutral-900 pt-8 md:pt-32">
 	<!-- Bullet Points -->
-	<section class="flex flex-col gap-4 py-8 items-center">
-    	<Icon><Writing class="fill-white" /></Icon>
+	<section class="flex flex-col items-center gap-4 py-8">
+    <Icon name="writing" />
 		<Text type="title1" color="lightPrimary" class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</Text>
 
 		<Text type="subhead" color="lightSecondary" class="text-center px-8 mb-8 max-w-4xl">
@@ -117,7 +116,7 @@
 
 	<!-- Illustrations -->
 	<section class="flex flex-col items-center gap-4 p-8">
-        <Icon><Handshake class="fill-primary-light" /></Icon>
+        <Icon name="handshake" />
        	<Text type="title1" color="lightPrimary" class="text-center">A New Era for Partnerships</Text>
 
 		<Text type="subhead" color="lightSecondary" class="text-center max-w-4xl mb-8">
@@ -130,13 +129,15 @@
 		{/each}
 	</section>
 
-	<section class="p-8 flex flex-col items-center">
-    	<Icon><Arrows class="stroke-neutral-100" /></Icon>
+	<!-- Call to Action -->
+	<section class="flex flex-col justify-center items-center gap-3 sm:gap-6 mx-4 sm:mx-28 pb-9 sm:pb-24">
+    <Icon name="arrows" />
 		<Text type="title1" color="lightPrimary" class="text-center">Never let a referral escape</Text>
+		<Button type="primary" href={getEarlyAccessHref}>{getEarlyAccessText}</Button>
 	</section>
 
 	<!-- Footer -->
-	<footer class="flex justify-center content-center mx-4 sm:mx-28 py-4 sm:py-10 border-t border-[#EBEBEB]">
+	<footer class="flex justify-center items-center mx-4 sm:mx-28 py-4 sm:py-10 border-t border-[#EBEBEB]">
 		<Text type="footnote" color="lightPrimary">
 			&copy; {currentDate.getFullYear()} OnePlusOne
 		</Text>

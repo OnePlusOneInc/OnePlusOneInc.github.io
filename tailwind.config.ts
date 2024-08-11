@@ -11,6 +11,9 @@ export default {
 			letterSpacing: {
 				logo: '-3.5px'
 			},
+			backgroundImage: {
+				'radial-gradient': 'radial-gradient(var(--tw-gradient-stops))',
+			}, 
 			backgroundColor: {
 				hero: '#111113',
 				primary: {
@@ -33,7 +36,11 @@ export default {
 				}
 			},
 			colors: {
-				'opo-orange': '#FF5C00',
+				'opo-orange': {
+					d1: '#D64D00',
+					default: '#FF5C00',
+					l1: '#FF792E',
+				},
 				'opo-red': '#DE1E45',
 				'primary-light': '#FFFAF4',
 				'primary-dark': '#1D1D20'
