@@ -20,6 +20,9 @@
         copy: [
           'font-inter', 'font-normal', 'text-sm', 'sm:text-base' 
         ],
+        footnote: [
+          'font-inter', 'font-normal', 'text-sm', 
+        ],
         callout: [
           'font-inter', 'font-medium', 'text-sm', 'sm:text-base', 
         ]
@@ -45,7 +48,11 @@
 {#if  type === 'copy' || type === 'callout'}
   <p {...$$props} class={style({type, color, class: $$props.class})}>
     <slot />
-  </p>  
+  </p>
+{:else if type === 'footnote'}
+  <h6 {...$$props} class={style({type, color, class: $$props.class})}>
+  <slot />
+  </h6>
 {:else}
   <h1 {...$$props} class={style({type, color, class: $$props.class})}>
     <slot />
