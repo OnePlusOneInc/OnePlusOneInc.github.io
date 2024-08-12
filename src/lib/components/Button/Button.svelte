@@ -9,7 +9,7 @@
           "bg-opo-orange-default", "hover:bg-opo-orange-l1", "active:bg-opo-orange-d1", "px-3", "py-2", "sm:px-4", "sm:py-3", "py-1", "sm:py-2", 
         ],
         secondary: [
-          "bg-transparent", "border", "px-3", "sm:px-4"
+          "bg-transparent", "border", "active:border-primary-light", "px-3", "sm:px-4", "py-1", "sm:py-2"
         ],
       },
       textColor: {
