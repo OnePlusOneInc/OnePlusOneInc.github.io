@@ -1,5 +1,5 @@
 <script lang="ts">
-    import FadeInCard from './FadeInCard.svelte';
+  import FadeInCard from './FadeInCard.svelte';
 
 	export let title: string;
 	export let description: string;
@@ -17,10 +17,12 @@
 </script>
 
 <FadeInCard>
-	<div role="complementary" class="m-auto h-full w-full rounded-md p-0.5 bg-neutral-700" on:mousemove|self={updateBackgroundGradient} on:mouseleave={removeBackgroundGradient}>
-		<div class="aspect-square h-full w-full content-center rounded-md bg-neutral-800 p-8 pointer-events-none">
-			<h3 class="mb-2 text-center text-6xl">{title}</h3>
-			<p class="text-center text-xl text-neutral-500">{description}</p>
+	<div
+		class="flex items-stretch w-[227px] h-[204px] sm:w-[248px] sm:h-[222px] aspect-auto rounded-md bg-neutral-700 on:mousemove|self={updateBackgroundGradient} on:mouseleave={removeBackgroundGradient} p-0.5"
+	>
+		<div class="px-9 flex flex-col justify-center grow rounded-md bg-neutral-800">
+			<p class="mb-2 text-center font-geist font-semibold text-6xl text-primary-dark">{title}</p>
+			<p class="text-center font-inter font-medium text-xl sm:text-2xl text-neutral-500">{description}</p>
 		</div>
 	</div>
 </FadeInCard>

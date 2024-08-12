@@ -37,7 +37,7 @@
 </script>
 
 <!-- Above the fold section -->
-<section class="bg-hero flex flex-col lg:min-h-screen">
+<div class="bg-hero flex flex-col lg:min-h-screen">
 	<!-- Top bar with logo and "Get early access" button  -->
 	<section class="{pageMargin} flex flex-col flex-nowrap justify-between items-stretch">
 		<div class="flex flex-row flex-nowrap justify-between items-center py-4 md:py-6 xl:py-8">
@@ -63,19 +63,17 @@
 			<Button class="place-self-center sm:z-10 sm:absolute" type="primary" href={getEarlyAccessHref}>{getEarlyAccessText}</Button>
 		</div>
 	</section>
-</section>
 
-<!-- Metric Cards -->
-<section class="flex flex-col gap-8 p-8 md:p-32 text-neutral-100">
-	<Text type="title1" color="darkPrimary" class="text-center">When you tap into your Partner Ecosystem:</Text>
-
-	<div class="flex flex-col justify-center gap-4 md:flex-row">
-		<BigNumberCard title="2X" description="Drive 2x more revenue" />
-		<BigNumberCard title="41%" description="41% Higher Win Rate" />
-		<BigNumberCard title="35%" description="Close deals 35% faster" />
-	</div>
-</section>
-
+	<!-- Metric Cards -->
+	<section class="flex flex-col items-center gap-8 mx-4 sm:mx-28 pb-12 sm:pb-24">
+		<Text type="title1" color="darkPrimary" class="text-center sm:max-w-[50%] place-self-center">When you tap into your Partner Ecosystem:</Text>
+		<div class="flex flex-col justify-center gap-4 md:flex-row">
+			<BigNumberCard title="2X" description="Drive 2x more revenue" />
+			<BigNumberCard title="41%" description="41% Higher Win Rate" />
+			<BigNumberCard title="35%" description="Close deals 35% faster" />
+		</div>
+	</section>
+</div>
 <!-- GTM Problem -->
 <section class="flex flex-col gap-8 bg-neutral-800 p-8 md:p-32 min-h-screen items-center">
     <Icon name="users" />
