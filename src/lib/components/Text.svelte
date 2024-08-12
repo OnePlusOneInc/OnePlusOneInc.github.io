@@ -11,8 +11,11 @@
         hero: [
         'font-geist', 'font-medium', 'text-3xl', 'sm:text-7xl',
         ],
-        title1: [
+        largeTitle: [
           'font-geist', 'font-medium', 'text-2xl', 'sm:text-5xl', 
+        ],
+        title1: [
+          'font-geist', 'font-medium', 'text-base', 'sm:text-3xl', 
         ],
         subhead: [
           'font-inter', 'font-normal', 'text-base'
@@ -49,7 +52,7 @@
   export let color: StyleProps['color'] = 'primary';
 </script>
 
-{#if  type === 'copy' || type === 'callout' || type === 'button'}
+{#if  [type && 'copy', 'subhead', 'callout', 'button'].includes(type) }
   <p {...$$props} class={style({type, color, class: $$props.class})}>
     <slot />
   </p>
@@ -57,6 +60,10 @@
   <h6 {...$$props} class={style({type, color, class: $$props.class})}>
   <slot />
   </h6>
+  {:else if type === 'title1'}
+    <h2 {...$$props} class={style({type, color, class: $$props.class})}>
+    <slot />
+    </h2>
 {:else}
   <h1 {...$$props} class={style({type, color, class: $$props.class})}>
     <slot />

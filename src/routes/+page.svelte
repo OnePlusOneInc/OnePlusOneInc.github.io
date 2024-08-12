@@ -66,7 +66,7 @@
 
 	<!-- Metric Cards -->
 	<section class="flex flex-col items-center gap-8 mx-4 sm:mx-28 pb-12 sm:pb-24">
-		<Text type="title1" color="darkPrimary" class="text-center sm:max-w-[50%] place-self-center">When you tap into your Partner Ecosystem:</Text>
+		<Text type="largeTitle" color="darkPrimary" class="text-center sm:max-w-[50%] place-self-center">When you tap into your Partner Ecosystem:</Text>
 		<div class="flex flex-col justify-center gap-4 md:flex-row">
 			<BigNumberCard title="2X" description="Drive 2x more revenue" />
 			<BigNumberCard title="41%" description="41% Higher Win Rate" />
@@ -75,31 +75,36 @@
 	</section>
 </div>
 <!-- GTM Problem -->
-<section class="flex flex-col gap-8 bg-neutral-800 p-8 md:p-32 min-h-screen items-center">
+<section class="flex flex-col bg-primary-dark px-4 sm:px-28 pt-6 sm:pt-24 pb-12 sm:pb-0 min-h-screen items-center">
     <Icon name="users" />
-	<Text type="title1" color="darkPrimary" class="text-center">The GTM Problem</Text>
-	<Text type="subhead" color="darkSecondary" class="text-center max-w-4xl">
+	<Text type="largeTitle" color="darkPrimary" class="text-center mt-3 sm:mt-6 mb-4">The GTM Problem</Text>
+	<Text type="subhead" color="darkSecondary" class="text-center sm:max-w-[50%] mb-12 sm:mb-20">
 		B2B companies are struggling to hit revenue targets in this economic downturn. Buyers are
 		overwhelmed by volume-based tactics, generic outreach, and AI-generated content.
 	</Text>
 
-	<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-		<ProblemCard problem="An average of 306 cold emails sent to generate 1 lead" />
-		<ProblemCard problem="MQL to SQL conversion rates have dropped to a mere 13%" />
-		<ProblemCard
-			problem="B2B Marketing Customer Acquisition Costs have surged 75% in the past 5 years"
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-3 pb-16 sm:pb-20 max-w-[60%] md:max-w-full">
+		<ProblemCard header="306" problem="An average of 306 cold emails sent to generate 1 lead" />
+		<ProblemCard header="13%" problem="MQL to SQL conversion rates have dropped to a mere 13%" />
+		<ProblemCard header="75%" problem="B2B Marketing Customer Acquisition Costs have surged 75% in the past 5 years"
 		/>
 	</div>
-
-	<p class="text-center text-neutral-100">This is why 84% of B2B purchases start with a referral</p>
+	<div class="grid grid-cols-1 md:grid-cols-3 justify-center items-center gap-16">
+		<div class="hidden md:block h-px bg-gradient-to-r from-[#222225] to-primary-light/[.20]"></div>
+		<Text type="title1" color="darkPrimary" class="text-center">This is why 84% of B2B purchases start with a referral</Text>
+		<div class="hidden md:block h-px bg-gradient-to-r to-[#222225] from-primary-light/[.20]"></div>
+	</div>
+	<div class="hidden md:block h-44 w-full relative">
+		<div class="bg-primary-light rounded-t-xl absolute bottom-0 h-24 left-32 right-32"/>
+	</div>
 </section>
 
 <!-- Light Background -->
-<section class="rounded-t-xl bg-primary-light text-neutral-900 pt-8 md:pt-32">
+<section class="rounded-t-xl md:rounded-t-none bg-primary-light pt-8 md:pt-32">
 	<!-- Bullet Points -->
 	<section class="flex flex-col items-center gap-4 py-8">
     <Icon name="writing" />
-		<Text type="title1" color="lightPrimary" class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</Text>
+		<Text type="largeTitle" color="lightPrimary" class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</Text>
 
 		<Text type="subhead" color="lightSecondary" class="text-center px-8 mb-8 max-w-4xl">
 			Partnerships often lose momentum, miss timelines, fail to launch, or fail to bring consistent results because Partner Managers are stuck using tools and processes built for other GTM departments.
@@ -124,7 +129,7 @@
 	<!-- Illustrations -->
 	<section class="flex flex-col items-center gap-4 p-8">
         <Icon name="handshake" />
-       	<Text type="title1" color="lightPrimary" class="text-center">A New Era for Partnerships</Text>
+       	<Text type="largeTitle" color="lightPrimary" class="text-center">A New Era for Partnerships</Text>
 
 		<Text type="subhead" color="lightSecondary" class="text-center max-w-4xl mb-8">
 			We empower B2B partnership teams with AI-powered insights, workflows, and automation to
@@ -139,7 +144,7 @@
 	<!-- Call to Action -->
 	<section class="{pageMargin} flex flex-col justify-center items-center gap-3 sm:gap-6 pb-9 sm:pb-24">
     <Icon name="arrows" />
-		<Text type="title1" color="lightPrimary" class="text-center">Never let a referral escape</Text>
+		<Text type="largeTitle" color="lightPrimary" class="text-center">Never let a referral escape</Text>
 		<Button type="primary" href={getEarlyAccessHref}>{getEarlyAccessText}</Button>
 	</section>
 
