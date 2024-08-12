@@ -36,19 +36,19 @@
 <!-- Above the fold section -->
 <section class="bg-hero">
 	<!-- Top bar with logo and "Get early access" button  -->
-	<section class="mx-4 sm:mx-28 flex flex-col flex-nowrap justify-between items-stretch">
-		<div class="flex flex-row flex-nowrap justify-between items-center py-4 sm:py-9">
+	<section id="nav" class="mx-4 sm:mx-12 md:mx-28 flex flex-col flex-nowrap justify-between items-stretch">
+		<div class="flex flex-row flex-nowrap justify-between items-center py-4 md:py-6 xl:py-8">
 			<Logo text={true} />
 			<Button type="secondary" href={getEarlyAccessHref}>{getEarlyAccessText}</Button>
 		</div>
 		<div class="h-px bg-gradient-to-r from-transparent sm:from-20% via-[#38373A] to-transparent sm:to-80%"/>
 	</section>
-	
+
 	<!-- Hero -->
 	<section id="hero" class={`py-8  bg-[size:200%] md:bg-cover min-h-[calc(100vh-${navSize}px)]`}>
 		<div class="flex flex-col items-center gap-4 px-[10%]">
 			<Text type="callout" color="darkPrimary" class="rounded-full px-4 sm:px-5 py-2 bg-primary-dark">Backed by top investors</Text>
-			<Text type="hero" color="darkPrimary" class="sm:max-w-[60%] text-center">Turn all Partnerships into Revenue</Text>
+			<Text type="hero" color="darkPrimary" class="lg:max-w-[60%] text-center">Turn all Partnerships into Revenue</Text>
 			<Text type="subhead" color="darkSecondary" class="sm:max-w-[55%] text-center">
 				Our AI Partnerships Intelligence Platform analyzes sales calls to uncover partner
 				opportunities. Our insights and workflows empower you to boost revenue and close deals faster
