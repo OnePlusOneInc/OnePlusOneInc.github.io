@@ -100,26 +100,26 @@
 </section>
 
 <!-- Light Background -->
-<section class="rounded-t-xl md:rounded-t-none bg-primary-light pt-8 md:pt-32">
+<section class="rounded-t-xl md:rounded-t-none bg-primary-light pt-7 md:pt-0">
 	<!-- Bullet Points -->
-	<section class="flex flex-col items-center gap-4 py-8">
-    <Icon name="writing" />
-		<Text type="largeTitle" color="lightPrimary" class="text-center text-2xl px-8">But Partnerships are still stuck in the old day</Text>
+	<section class="flex flex-col items-center gap-4 pb-20 sm:pb-32">
+    <Icon name="writing" class="md:-mt-4 z-10" />
+		<Text type="largeTitle" color="lightPrimary" class="text-center text-2xl px-8 sm:max-w-[50%] ">But Partnerships are still stuck in the old day</Text>
 
-		<Text type="subhead" color="lightSecondary" class="text-center px-8 mb-8 max-w-4xl">
+		<Text type="subhead" color="lightSecondary" class="text-center px-8 mb-8 max-w-4xl sm:max-w-[55%]">
 			Partnerships often lose momentum, miss timelines, fail to launch, or fail to bring consistent results because Partner Managers are stuck using tools and processes built for other GTM departments.
 		</Text>
-		<AnimatedCarousel direction="leftToRight">
+		<AnimatedCarousel direction="leftToRight" class="self-stretch">
 			{#each bulletPoints['one'] as bulletPoint}
 				<Pill>{bulletPoint}</Pill>
 			{/each}
 		</AnimatedCarousel>
-		<AnimatedCarousel direction="rightToLeft">
+		<AnimatedCarousel direction="rightToLeft" class="self-stretch">
 			{#each bulletPoints['two'] as bulletPoint}
 				<Pill>{bulletPoint}</Pill>
 			{/each}
 		</AnimatedCarousel>
-		<AnimatedCarousel direction="leftToRight">
+		<AnimatedCarousel direction="leftToRight" class="self-stretch">
 			{#each bulletPoints['three'] as bulletPoint}
 				<Pill>{bulletPoint}</Pill>
 			{/each}

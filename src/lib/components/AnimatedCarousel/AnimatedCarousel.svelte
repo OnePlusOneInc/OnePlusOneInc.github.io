@@ -13,7 +13,7 @@
   }
 </script>
 
-<div class="carousel relative flex flex-row flex-nowrap {justifyContent}
+<div class="carousel relative flex flex-row flex-nowrap overflow-hidden {justifyContent}
   before:left-0 before:bg-gradient-to-r before:from-primary-light
   after:right-0 after:bg-gradient-to-l after:from-primary-light
   before:absolute before:top-0 before:w-1/12 before:h-full before:content-[''] before:z-10
