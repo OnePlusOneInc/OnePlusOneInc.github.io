@@ -1,19 +1,13 @@
 <script lang="ts">
-    import FadeInCard from './FadeInCard.svelte';
+  import FadeInCard from './FadeInCard.svelte'
+	import Text from '$lib/components/Text.svelte'
 
+	export let header: string;
 	export let problem: string;
 </script>
 
-<FadeInCard>
-	<div class="h-full rounded-md bg-neutral-700 p-2">
-		<div class="aspect-square content-center">
-			<h3 class="text-center text-neutral-600">Illustration here</h3>
-		</div>
-		<div
-			class="h-0.5 bg-gradient-to-r from-neutral-700 from-10% via-neutral-300 to-neutral-700 to-90%"
-		/>
-		<p class="p-4 text-center text-sm text-neutral-500">
-			{problem}
-		</p>
-	</div>
+<FadeInCard class="flex flex-col bg-secondary-dark rounded-md p-6 gap-6 aspect-square">
+	<Text type="hero" color="darkPrimary" class="grow text-center place-content-center font-geist font-semibold text-6xl">{header}</Text>
+	<div class="h-px bg-radial-gradient from-primary-light/[.2] to-[#222225] mx-5" />
+	<Text type="subhead" color="darkSecondary" class="text-center">{[problem]}</Text>
 </FadeInCard>
