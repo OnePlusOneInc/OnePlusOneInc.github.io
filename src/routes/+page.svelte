@@ -1,5 +1,4 @@
 <script lang="ts">
-	import FeatureCard from './FeatureCard.svelte'
 	import BigNumberCard from './BigNumberCard.svelte'
 	import ProblemCard from './ProblemCard.svelte'
 	import Icon from './Icon.svelte';
@@ -14,14 +13,10 @@
   import Card from '$lib/components/StackedCards/Card.svelte'
 	import Hand from '$lib/assets/hand.svg'
 
-	/* Size in pixels for the nav bar, defining it as a constant means we can use it to calculate how
-	tall the hero section should be in order to fill the screen taking into account the navbar size */
-	const navSize: number = 80;
-
 	const bulletPoints: Record<'one' | 'two' | 'three', string[]> = {
 		one: [
-			"Missing referrals and losing deals?", 
-			"Constantly reminding your sales team to refer partners?", 
+			"Missing referrals and losing deals?",
+			"Constantly reminding your sales team to refer partners?",
 			"Organizing partner education sessions and documents that no one cares about?",
 		],
 		two: [
@@ -31,7 +26,7 @@
 		],
 		three: [
 			"Losing credit for partner-driven deals due to poor record-keeping?",
-			"Wishing you could be on every sales call to highlight partner value?", 
+			"Wishing you could be on every sales call to highlight partner value?",
 			"Spending hours in Salesforce trying to support your sales team?",
 		]
 	}
@@ -99,10 +94,10 @@
     <Icon name="users" />
 	<Text type="largeTitle" color="darkPrimary" class="text-center mt-3 sm:mt-6 mb-4">The GTM Problem</Text>
 	<Text type="subhead" color="darkSecondary" class="text-center sm:max-w-[50%] mt-2 sm:mt-4 mb-12 sm:mb-20">
-		The B2B world is changing fast, and old ways of growing don't work anymore. Buyers are overwhelmed by volume-based tactics, generic outreach, and AI-generated content. 
+		The B2B world is changing fast, and old ways of growing don't work anymore. Buyers are overwhelmed by volume-based tactics, generic outreach, and AI-generated content.
 	</Text>
 
-	<div class="grid grid-cols-1 gap-4 md:grid-cols-3 pb-16 sm:pb-20 max-w-[60%] md:max-w-full">
+	<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 pb-16 sm:pb-20 max-w-[80%] lg:max-w-full">
 		<ProblemCard header="306" problem="An average of 306 cold emails sent to generate 1 lead" />
 		<ProblemCard header="13%" problem="MQL to SQL conversion rates have dropped to a mere 13% B2B Marketing Customer" />
 		<ProblemCard header="75%" problem="Acquisition Costs have surged 75% in the past 5 years"
@@ -162,7 +157,7 @@
 				<img src={Hand} alt="" class="mt-16 max-w-none sticky top-1/2 object-cover" />
 			</div>
 			<div class="grid grid-cols-2 pt-44 gap-8 overflow-clip">
-				<StackedCards 
+				<StackedCards
 					class="ml-28"
 					contents={features['two']}
 					cardType={Card}
@@ -177,7 +172,7 @@
 				cardType={Card}
 			/>
 		</div>
-		
+
 		<Text type="title1" color="lightPrimary" class="pt-16 sm:pt-20 text-center {pageMargin}">
 			Helping your partners find new customers strengthens your partnership. They grow, you grow, and customers are happier. When your partners succeed, so do you.
 		</Text>

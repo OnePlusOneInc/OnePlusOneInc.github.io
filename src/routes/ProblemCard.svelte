@@ -7,7 +7,7 @@
 </script>
 
 <FadeInCard class="flex flex-col bg-secondary-dark rounded-md p-6 gap-6 aspect-square">
-	<Text type="hero" color="darkPrimary" class="grow text-center place-content-center font-geist font-semibold text-6xl">{header}</Text>
+	<Text type="hero" color="darkPrimary" class="flex-grow text-center place-content-center font-geist font-semibold text-6xl">{header}</Text>
 	<div class="h-px bg-radial-gradient from-primary-light/[.2] to-[#222225] mx-5" />
-	<Text type="subhead" color="darkSecondary" class="text-center">{[problem]}</Text>
+  <Text type="subhead" color="darkSecondary" class="text-center md:h-1/5 lg:h-2/5 xl:h-1/5">{[problem]}</Text>
 </FadeInCard>
