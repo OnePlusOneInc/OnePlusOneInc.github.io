@@ -54,7 +54,7 @@
 </script>
 
 <!-- Above the fold section -->
-<div class="bg-hero flex flex-col lg:min-h-screen">
+<div class="bg-hero flex flex-col">
   <!-- Top bar with logo and "Get early access" button  -->
   <section class="{pageMargin} flex flex-col flex-nowrap justify-between items-stretch">
     <div class="flex flex-row flex-nowrap justify-between items-center py-4 md:py-6 xl:py-8">
@@ -65,7 +65,7 @@
   </section>
 
   <!-- Hero -->
-  <section class="flex flex-col flex-grow gap-6 sm:gap-8 pt-8 pb-32 sm:pb-24">
+  <section class="flex flex-col flex-grow gap-6 sm:gap-8 pt-8 pb-32 sm:pb-24 lg:min-h-screen">
     <div class="{pageMargin} flex flex-col items-center">
       <Toast type="hero" textColor="hero">Backed by top investors</Toast>
       <Text type="hero" color="darkPrimary" class="pt-5 pb-4 lg:max-w-[60%] text-center">Unlock Revenue through Partnerships</Text>
@@ -90,7 +90,7 @@
   </section>
 </div>
 <!-- GTM Problem -->
-<section class="flex flex-col bg-primary-dark px-4 sm:px-28 pt-6 sm:pt-24 pb-12 sm:pb-0 min-h-screen items-center">
+<section class="flex flex-col bg-primary-dark px-4 sm:px-28 pt-6 sm:pt-24 pb-12 sm:pb-0 items-center">
     <Icon name="users" />
   <Text type="largeTitle" color="darkPrimary" class="text-center mt-3 sm:mt-6 mb-4">The GTM Problem</Text>
   <Text type="subhead" color="darkSecondary" class="text-center sm:max-w-[50%] mt-2 sm:mt-4 mb-12 sm:mb-20">
